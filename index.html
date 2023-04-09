@@ -1,34 +1,43 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Random Image Website</title>
+	<title>Random Animal Image Website</title>
 	<style>
-		#imageContainer {
-			width: 50px;
-			height: 50px;
-			border: 1px solid black;
-			display: flex;
-			justify-content: center;
-			align-items: center;
+		#image-frame {
+			width: 400px;
+			height: 400px;
+			border: 2px solid black;
+			padding: 20px;
+			margin: 0 auto;
+			text-align: center;
 		}
-
 		#randomImage {
-			max-width: 100%;
-			max-height: 100%;
+			max-width: 400px;
+			max-height: 400px;
 		}
 	</style>
 </head>
-<body onload="changeImage()">
-	<h1>Random Image Generator</h1>
-	<div id="imageContainer">
+<body>
+	<div id="image-frame">
+		<h1>The Game is You!!</h1>
 		<img id="randomImage">
+		<p id="joke"></p>
 	</div>
+	
 	<script>
 		var images = ["image1.jpg", "image2.jpg", "image3.jpg", "image4.jpg", "image5.jpg"];
+		var jokes = ["Why do cows wear bells? Because their horns don't work!", 
+					"What do you call a bear with no teeth? A gummy bear!", 
+					"Why did the chicken cross the playground? To get to the other slide!", 
+					"Why did the duck cross the road? To prove he's not a chicken!", 
+					"What do you call a sheep that doesn't have any wool? A naked sheep!"];
 		function changeImage() {
 			var randomNumber = Math.floor(Math.random() * images.length);
 			document.getElementById("randomImage").src = images[randomNumber];
+			document.getElementById("joke").innerHTML = jokes[randomNumber];
 		}
+		changeImage(); // call the function on page load
 	</script>
 </body>
 </html>
