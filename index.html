@@ -3,10 +3,11 @@
 <head>
 	<title>Random Image Website</title>
 </head>
-<body>
+<body onload="changeImage()">
 	<h1>Random Image Generator</h1>
-	<img id="randomImage">
-	<button onclick="changeImage()">New Image</button>
+	<div id="imageContainer">
+		<img id="randomImage">
+	</div>
 	<script>
 		var images = ["image1.jpg", "image2.jpg", "image3.jpg", "image4.jpg", "image5.jpg"];
 		function changeImage() {
