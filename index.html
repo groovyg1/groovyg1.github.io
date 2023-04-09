@@ -16,6 +16,12 @@
 			max-width: 400px;
 			max-height: 400px;
 		}
+		#button-frame {
+			position: absolute;
+			top: 80%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
 	</style>
 </head>
 <body>
@@ -24,7 +30,7 @@
 		<img id="randomImage">
 		<p id="joke"></p>
 	</div>
-	<div>
+	<div id="button-frame">
 		<button onclick="refreshPage()">Refresh Page</button>
 	</div>
 	
